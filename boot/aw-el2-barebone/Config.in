@@ -1,0 +1,6 @@
+config BR2_TARGET_AW_EL2_BAREBONE
+	bool "Allwinner EL2 PCI wrapper"
+	help
+	  ALlwiner EL2 is an hypervisor to wrap quirky Allwinner H6 PCIe.
+
+	  https://github.com/Icenowy/aw-el2-barebone
