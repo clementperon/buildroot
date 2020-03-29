@@ -155,6 +155,12 @@ UBOOT_MAKE_OPTS += BL31=$(BINARIES_DIR)/bl31.bin
 endif
 endif
 
+# Allwinner PCI wrapper
+ifeq ($(BR2_TARGET_UBOOT_NEEDS_AW_EL2_BAREBONE),y)
+UBOOT_DEPENDENCIES += aw-el2-barebone
+UBOOT_MAKE_OPTS += HYP=$(BINARIES_DIR)/hyp.bin
+endif
+
 ifeq ($(BR2_TARGET_UBOOT_NEEDS_DTC),y)
 UBOOT_DEPENDENCIES += host-dtc
 endif

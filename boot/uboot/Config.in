@@ -202,6 +202,12 @@ config BR2_TARGET_UBOOT_NEEDS_ATF_BL31_ELF
 
 endchoice
 
+config BR2_TARGET_UBOOT_NEEDS_AW_EL2_BAREBONE
+	bool "U-Boot needs AW EL2 Barebone"
+	select BR2_TARGET_AW_EL2_BAREBONE
+	help
+	  Allwinner H6 has a quirky PCIe that needs to be wrapped.
+
 menu "U-Boot binary format"
 
 config BR2_TARGET_UBOOT_FORMAT_AIS
